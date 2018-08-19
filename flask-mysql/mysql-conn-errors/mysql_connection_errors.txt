@@ -1,0 +1,20 @@
+Errors Tested
+=============
+
+[ ERROR #1]  NameError: name 'Nonecopy' is not defined
+[  FIXED  ]  I renamed parameter to 'None'
+
+[ ERROR #2]  IndentationError: unexpected Indentation
+[  FIXED  ]  Looked for and then removed all suspicious indentation
+
+[ ERROR #3]  pymysql.err.OperationalError: (1045, "Access denied for 
+             user 'root'@'localhost' (using password: YES)")
+[  FIXED  ]  Supply the correct root password to pymysql.connect()
+
+[ ERROR #4]  pymysql.err.OperationalError: (2003, "Can't connect
+             to MySQL server on '127.0' (timed out)")
+[  FIXED  ]  Supply the correct hostname 'localhost' or '127.0.0.1'
+
+[ ERROR #4]  ImportError: cannot import name 'connectToMySQL'
+[  FIXED  ]  It was just another indentation issues...
+             <>  Located and removed the buggy indentation 

@@ -1,0 +1,39 @@
+/* 
+===============================
+|  General CSS Requirenments  |
+===============================
+ */
+
+body {
+  padding: 0rem 2rem !important;
+}
+
+.wrapper {
+  width: 100vh !important;
+  display: grid !important;
+  padding: 1rem 4rem !important;
+  grid-template-rows: auto !important;
+}
+
+.footer div {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  /* align-content: center; */
+}
+
+.footer div p:first-child {
+  color: #009AC7 !important;
+  align-self: center !important;
+  line-height: 3.29rem !important;
+  justify-self: flex-end !important;
+}
+
+h1.headline {
+  color: Gray !important;
+  font-size: 26px !important;
+  margin-top: 2rem !important;
+}
+
+td {
+  cursor: pointer !important;
+}

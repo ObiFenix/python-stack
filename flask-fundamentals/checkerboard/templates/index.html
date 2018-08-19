@@ -1,0 +1,76 @@
+<!--                   [ Assignment: Playground  ]
+
+Objectives:
+=====================================================
+<>  Shall pass information from route to the template
+<>  Shall display date passed from the route to template files
+==============================================================-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Playground</title>
+    <!--
+    | Required CSS Files |
+    -->
+    <style media="screen">
+      * {
+        /* outline: 1px dotted purple; */
+        font-family: serif;
+      }
+
+      .wrapper {
+        /* grid-gap: 1rem; */
+        padding: 2rem 40rem;
+      }
+
+      .grid {
+        display: grid;
+        justify-content: center;
+        grid-template-rows: repeat({{rows}}, 1fr);
+        grid-template-columns: repeat({{cols}}, 1fr)
+      }
+
+      .block1 {
+        width: 5rem;
+        height: 5rem;
+        background-color: white;
+        border: .02px solid #546a30;
+      }
+      .block2 {
+        width: 5rem;
+        height: 5rem;
+        background-color: #546a30;
+        border: .02px solid #546a30;
+      }
+
+      h1 {
+        color: gray;
+        text-align: center;
+        font-weight: lighter;
+        font-family: sans-serif;
+      }
+
+      span {
+        color: black;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+
+</style>
+
+  <body>
+    <div class="wrapper">
+      <h1>Welcome <span>OBI</span>FENIX</h1>
+      <div class="grid">
+        {% for i in range( rows ) %}
+          {% for j in range( cols ) %}
+            <div class="block{{ (i+j)%2 + 1 }}"></div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

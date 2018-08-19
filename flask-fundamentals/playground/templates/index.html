@@ -1,0 +1,52 @@
+<!--                   [ Assignment: Playground  ]
+
+Objectives:
+=====================================================
+<>  Shall pass information from route to the template
+<>  Shall display date passed from the route to template files
+==============================================================-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Playground</title>
+  </head>
+
+<style media="screen">
+  .wrapper {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 2rem 10rem;
+    justify-content: center;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr)
+  }
+  .block {
+    background-color: {{ color }};
+    /* display: inline-block; */
+    height: 15rem;
+    width: 16rem;
+  }
+  h1 {
+    color: gray;
+    margin-left: 40px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: sans-serif;
+  }
+  span {
+    color: black;
+    font-weight: bolder;
+  }
+</style>
+
+  <body>
+    <h1>Welcome <span>OBI</span>FENIX</h1>
+    <div class="wrapper">
+      {% for i in range(times) %}
+        <div class="block"></div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
